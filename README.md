@@ -1,1 +1,1 @@
-This is where I commit my Leetcode's solutions day by day.
+This is where I commit my leetcode's solutions day by day.
