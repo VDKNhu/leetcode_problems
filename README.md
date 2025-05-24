@@ -1,1 +1,1 @@
-This is where I commit my leetcode's solutions day by day.
+Practice coding and solve algorithmic problems.
