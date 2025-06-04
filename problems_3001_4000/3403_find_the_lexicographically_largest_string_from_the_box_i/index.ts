@@ -7,8 +7,8 @@ function answerString(word: string, numFriends: number): string {
     const len = word.length;
 
     for(let i = 0; i < len; i++) {
-        const maxLen = Math.min(len - i, len - numFriends + 1);
-        const subStr = word.slice(i, i + maxLen);
+        const endIndex = Math.min(len, len - numFriends + i + 1);
+        const subStr = word.substring(i, endIndex);
 
         if(subStr > result) {
             result = subStr;
