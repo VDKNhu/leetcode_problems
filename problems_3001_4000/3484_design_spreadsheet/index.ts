@@ -1,5 +1,5 @@
 class Spreadsheet {
-    spsh: Map<string, number>;
+    private spsh: Map<string, number>;
 
     constructor(rows: number) {
         this.spsh = new Map<string, number>();
