@@ -24,7 +24,7 @@ function maxLevelSum(root: TreeNode | null): number {
             if(curTree.left) {
                 queue.push(curTree.left);
             }
-            
+
             if(curTree.right) {
                 queue.push(curTree.right);
             }
@@ -35,6 +35,38 @@ function maxLevelSum(root: TreeNode | null): number {
             maxLevel = curLevel;
         }
         curLevel++;
+    }
+
+    return maxLevel;
+};
+
+// Optimize by utilizing index instead of shift()
+function maxLevelSumV1(root: TreeNode | null): number {
+    let maxLevel = 0, maxSum = -Infinity, curLevel = 0, index = 0;
+    const queue: TreeNode[] = [root!];
+
+    while(index < queue.length) {
+        const len = queue.length - index;
+        let curSum = 0;
+        curLevel++;
+
+        for(let i = 0; i < len; i++) {
+            const curTree = queue[index++];
+            curSum += curTree.val;
+
+            if(curTree.left) {
+                queue.push(curTree.left);
+            }
+
+            if(curTree.right) {
+                queue.push(curTree.right);
+            }
+        }
+
+        if(curSum > maxSum) {
+            maxSum = curSum;
+            maxLevel = curLevel;
+        }
     }
 
     return maxLevel;
