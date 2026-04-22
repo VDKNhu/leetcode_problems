@@ -1,4 +1,4 @@
-class Solution0103 {
+class Solution010103 {
     /**
      * @param {number[]} arr
      * @return {number[]}

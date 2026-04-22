@@ -1,4 +1,4 @@
-class Solution0301 {
+class Solution010301 {
     /**
      * @param {string[]} operations
      * @return {number}

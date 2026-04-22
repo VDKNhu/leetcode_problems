@@ -1,4 +1,4 @@
-class Solution0302 {
+class Solution010302 {
     /**
      * @param {string} s
      * @return {boolean}
